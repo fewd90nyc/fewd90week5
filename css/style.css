@@ -2,6 +2,7 @@ body {
   line-height: 1.8;
   font-family: "Sue Ellen Francisco", Arial, sans-serif;
   font-size: 18px;
+  height: 1080px;
 }
 
 #wrapper {
@@ -18,15 +19,16 @@ h1 {
   color: #333333;
 }
 
-h2 {
+h2 { font-size: 20px;
 	
 }
 
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding : 40px;
 }
+
 
 ul li {
   border-bottom: 2px dotted #9CE6C1;
@@ -83,9 +85,8 @@ nav a:hover {
 nav a.selected {
   background-color: #ffffff;
 }
+nav.open {
+  display: block;
 
-div {
-  display: none;
-  padding: 20px 0;
-  clear: both;
+
 }
