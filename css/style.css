@@ -64,6 +64,22 @@ ul {
   font-size: 24px;  
 }
 
+
+#reportcard {
+  display: block;
+  float: right;
+}
+
+.name_label {
+  display: inline;
+}
+
+.report_grade {
+  float: right;
+  margin-right: 25%;
+  display: inline;
+}
+
 nav a {
   width: 50%;
   float: left;
@@ -84,8 +100,14 @@ nav a.selected {
   background-color: #ffffff;
 }
 
-div {
+div.roster, .assign{
   display: none;
   padding: 20px 0;
   clear: both;
 }
+
+div.open {
+  display: block;
+}
+
+
