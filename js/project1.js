@@ -1,8 +1,3 @@
-// click to switch between roster and assignment
-document.getElementById("roster").onclick=showRoster;
-document.getElementById("assign").onclick=showAssign;
-
-
 // ALL THE FUNCTIONS
 // pull out Roster page
 function showRoster(){
@@ -99,3 +94,6 @@ function getValue(name,score){
 }
 
 
+// click to switch between roster and assignment
+document.getElementById("roster").onclick=showRoster;
+document.getElementById("assign").onclick=showAssign;
