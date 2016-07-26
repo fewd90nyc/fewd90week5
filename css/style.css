@@ -91,7 +91,9 @@ div {
 }
 
 .assign {
+  display: none;
 }
 
 .roster {
+  display: none;
 }
