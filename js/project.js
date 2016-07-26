@@ -10,3 +10,18 @@ function clearName() {
 function clearGrade() {
   document.getElementById("grade").value = "";
 }
+function showRoster() {
+document.querySelector(".roster").classList.toggle("open");
+document.querySelector("#roster").classList.toggle("selected");
+document.querySelector(".assign").classList.remove("open");
+document.querySelector("#assign").classList.remove("selected");
+}
+document.getElementById("roster").onclick = showRoster;
+
+function showInput() {
+document.querySelector(".roster").classList.toggle("open");
+document.querySelector("#roster").classList.toggle("selected");
+document.querySelector(".assign").classList.remove("open");
+document.querySelector("#assign").classList.remove("selected");
+}
+document.getElementById("assign").onclick = showInput;
