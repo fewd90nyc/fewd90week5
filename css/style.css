@@ -87,12 +87,5 @@ nav a.selected {
 div {
   padding: 20px 0;
   clear: both;
-}
-
-.assign {
-  display: none;
-}
-
-.roster {
   display: none;
 }
