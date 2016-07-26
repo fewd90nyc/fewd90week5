@@ -66,10 +66,18 @@ ul {
 
 
 #reportcard {
-  background-color: red;
   display: block;
-  width: 80px;
-  height:80px;
+  float: right;
+}
+
+.name_label {
+  display: inline;
+}
+
+.report_grade {
+  float: right;
+  margin-right: 25%;
+  display: inline;
 }
 
 nav a {

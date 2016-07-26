@@ -1,6 +1,7 @@
 // Your code here.
 var grade;
 var Name;
+var number_grade;
 
 document.getElementById("roster").onclick = function (){
 	document.querySelector("div.roster").classList.toggle("open");
@@ -14,27 +15,79 @@ document.getElementById("assign").onclick = function (){
 	document.querySelector("#assign").classList.toggle("selected"); 
 };
 
-function copy_input_to_report_card() {
-document.querySelector("li#joe .report_grade").innerHTML
-= document.getElementById("grade");
-}
+function curve() {
+	var student_name = document.getElementById("name").value;
 
-document.getElementById("clickme").onclick = copy_input_to_report_card;
+	if (student_name === "Joe" || student_name === "joe") {
+		document.querySelector("#joe .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name === "Chandler" || student_name === "chandler") {
+		document.querySelector("#chandler .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name === "Suzanne" || student_name === "suzanne") {
+		document.querySelector("#suzanne .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name === "Andre" || student_name === "andre") {
+		document.querySelector("#andre .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name === "Meghan" || student_name === "meghan") {
+		document.querySelector("#meghan .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name === "Sarah" || student_name === "sarah") {
+		document.querySelector("#sarah .report_grade").innerHTML
+		= number_grade_to_letter(number_grade);
+	}
+
+	if (student_name == null || student_name == "") {
+		alert("Name must be filled out");
+		return false;
+	}
+
+};
+
 
 function number_grade_to_letter(number_grade) {;
 
-	var number_grade = document.getElementById("grade");
+	var number_grade = document.getElementById("grade").value;
 
-	 if (number_grade > 85) {
+	 if (number_grade >= 85) {
 	  return "A";
 	 }
-	 if (number_grade > 75 <=84) {
-	 return "B";
+
+	 if (number_grade >= 75) {
+	  return "B";
 	}
-	 if (number_grade >65 <=74) {
-	 return "C";
+
+	 if (number_grade >= 65) {
+	  return "C";
 	}
+
+	if (number_grade >= 56) {
+		return "D";
+	}
+
+	 if (number_grade <= 55) {
+	  return "E";
+	}
+
+	 if (number_grade == null || number_grade == "") {
+	 alert("Grade must be filled out");
+	 return false;
+	}
+
 };
+
+document.getElementById("clickme").onclick = curve;
 
 document.getElementById("name").onfocus = clearName;
 document.getElementById("grade").onfocus = clearGrade;
