@@ -7,9 +7,11 @@ document.getElementById("assign").onclick = function(){
 	document.querySelector(".assign").classList.toggle("open");
 };
 
+function gradeassigned() {
+	document.getElementById("name").value
 
 
-
+}
 
 
 
