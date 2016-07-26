@@ -9,12 +9,17 @@ var grade = document.getElementById("grade");
 var addButton = document.getElementById("clickme");
 var reportCard = document.getElementById("reportcard");
 
+
 // Event Handlers
 roster.onclick = toggleRoster;
 assign.onclick = toggleAssign;
 addButton.onclick = addStudentGrade;
 studentName.onfocus = clearValue;
 grade.onfocus = clearValue;
+
+// Initialize Page
+loadStudentRoster();
+loadReportCard();
 
 
 // Function declarations
@@ -28,8 +33,6 @@ function toggleRoster() {
 
 	roster.classList = "selected";
 	assign.classList = "";
-
-	loadStudentRoster();
 }
 
 function toggleAssign() {
@@ -40,12 +43,36 @@ function toggleAssign() {
 	assign.classList = "selected";
 }
 
+function isValidInput(input) {
+	var isValid = (input.value != "");
+
+	if (!isValid) {
+		input.style.borderColor  = "red";
+	} else {
+		input.style.borderColor  = "#9CE6C1";
+	}
+
+	return isValid;
+}
+
 function addStudentGrade() {
-	//var student = { name: studentName.value, grade: grade.value };
-	var li = document.createElement("li");
-	var text = document.createTextNode(studentName.value + ", " + getLetterGrade(grade.value));
-	li.appendChild(text);
-	reportCard.appendChild(li);
+	if (isValidInput(studentName) && isValidInput(grade)) {
+		var li = document.createElement("li");
+		var text = document.createTextNode(studentName.value + ", " + getLetterGrade(grade.value));
+		li.appendChild(text);
+		li.onclick = deleteStudentGrade;
+		reportCard.appendChild(li);
+	}
+}
+
+function deleteStudentGrade() {
+	var response = confirm("Are you sure you want to delete this record?");
+
+	if (response) {
+		if (this.parentNode) {
+	  		this.parentNode.removeChild(this);
+		}
+	}
 }
 
 function getLetterGrade(numGrade) {
@@ -94,6 +121,21 @@ function loadStudentRoster() {
 			var text = document.createTextNode(students[i].name);
 			li.appendChild(text);
 			rosterList.appendChild(li);
+		}
+	}
+}
+
+
+function loadReportCard() {
+	if (students) {
+		reportCard.innerHTML = "";
+
+		for (var i = 0; i <= students.length - 1; i++) {
+			var li = document.createElement("li");
+			var text = document.createTextNode(students[i].name + ", " + getLetterGrade(students[i].grade));
+			li.appendChild(text);
+			li.onclick = deleteStudentGrade;
+			reportCard.appendChild(li);
 		}
 	}
 }
