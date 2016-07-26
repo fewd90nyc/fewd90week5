@@ -89,3 +89,10 @@ div {
   padding: 20px 0;
   clear: both;
 }
+
+div.open{
+  display: block;
+}
+
+
+
