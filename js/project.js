@@ -8,7 +8,9 @@ document.getElementById("assign").onclick = function(){
 };
 
 function gradeassigned() {
-	document.getElementById("name").value
+	var name = document.getElementById("name").value;
+	var grade = document.getElementById("grade").value;
+	
 
 
 }
