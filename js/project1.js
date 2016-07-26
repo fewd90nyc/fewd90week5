@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-// click to switch between roster and assignment
-document.getElementById("roster").onclick=showRoster;
-document.getElementById("assign").onclick=showAssign;
-
-
->>>>>>> origin/gh-pages
 // ALL THE FUNCTIONS
 // pull out Roster page
 function showRoster(){
@@ -101,11 +93,7 @@ function getValue(name,score){
 	return out;
 }
 
-<<<<<<< HEAD
+
 // click to switch between roster and assignment
 document.getElementById("roster").onclick=showRoster;
 document.getElementById("assign").onclick=showAssign;
-
-=======
->>>>>>> origin/gh-pages
-
