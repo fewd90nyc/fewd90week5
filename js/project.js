@@ -1,12 +1,21 @@
 // Your code here.
-//creating event for click on div.roster
-document.getElementById("roster").onclick = function(){
-	document.querySelector("roster").classList.toggle("open");
+document.getElementById("nav#roster").onclick = function(){
+  document.querySelector(".roster").classList.toggle("open");
 };
 
+//creating event for click on div.roster
 
 
 
+//function showOverlay() {
+//document.getElementById("roster").style.display = "block";
+
+//}
+
+//function hideOverlay() {
+  //document.getElementById("roster").style.display = "none";  
+
+//}
 
 
 // FREEBIES! Blank-out the inputs onfocus.
