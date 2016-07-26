@@ -1,11 +1,8 @@
 // Your code here.
 document.getElementById("roster").onclick = function(){
-  document.querySelector("#name").classList.toggle("open");
+  document.querySelector(".roster").classList.toggle("open");
 };
 
-document.getElementById("assign").onclick = function(){
-document.querySelector(".name").classList.toggle("open");
-};
 
 
 //creating event for click on div.roster
