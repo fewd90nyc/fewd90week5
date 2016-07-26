@@ -1,21 +1,21 @@
 // Your code here.
 
 
-document.getElementById("roster").onclick = function(){
-  document.div.classList.toggle("roster");
+//document.getElementById("roster").onclick = function(){
+//  document.div.classList.toggle("roster");
+//};
+
+
+
+document.getElementById("roster").onclick = function() {
+	document.querySelector(.roster).style.display = "";
+	document.querySelector(div.assign).style.display = "none";
 };
 
-
-
-//document.getElementById("roster").onclick = function() {
-//	document.querySelector(.roster).style.display = "block";
-//	document.querySelector(.assign).style.display = "none";
-//};
-
-//document.getElementById("assign").onclick = function() {
-//	document.querySelector(.roster).style.display = "none";
-//	document.querySelector(.assign).style.display = "block";
-//};
+document.getElementById("assign").onclick = function() {
+	document.querySelector(.roster).style.display = "none";
+	document.querySelector(div.assign).style.display = "";
+};
 
 
 
