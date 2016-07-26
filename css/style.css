@@ -13,7 +13,7 @@ body {
 
 
 .roster {
-  display: none;
+  display: block;
   font-size: 20px;
 
 
@@ -21,7 +21,7 @@ body {
 
 
 #roster {
-  display: block;
+  display: open;
   position: fixed;
   
 }
