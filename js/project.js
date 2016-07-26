@@ -8,13 +8,13 @@
 
 
 document.getElementById("roster").onclick = function() {
-	document.getElementsByClassName("roster").style.display = "block";
-	document.getElementsByClassName("assign").style.display = "none";
+	document.querySelector(.roster).style.display = "block";
+	document.querySelector(.assign).style.display = "none";
 };
 
 document.getElementById("assign").onclick = function() {
-	document.getElementsByClassName("roster").style.display = "none";
-	document.getElementsByClassName("assign").style.display = "block";
+	document.querySelector(.roster).style.display = "none";
+	document.querySelector(.assign).style.display = "block";
 };
 
 
