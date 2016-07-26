@@ -64,6 +64,10 @@ ul {
   font-size: 24px;  
 }
 
+div.open {
+    display: block;
+}
+
 nav a {
   width: 50%;
   float: left;
