@@ -32,21 +32,20 @@ ul li {
   border-bottom: 2px dotted #9CE6C1;
 }
 
-input, button {
-  font-family: monospace;
-  font-size: 20px;
-  border: 1px solid #9CE6C1;
-  box-shadow: none;
-  padding: 10px;
+
+button{
+  display:inline-block;
+  float:right;
+  margin-top:10px;
+  font-size:12px;
+  border:1px solid #ddd;
+  background-color:#FFF;  
 }
 
-input + input {
-  margin-left: 20px;
-}
-
-button {
-  width: 180px;
-  float: right;
+p{
+  display:inline-block;
+  padding:0;
+  margin:0;
 }
 
 #name {
