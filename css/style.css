@@ -80,7 +80,7 @@ nav a:hover {
   background-color: #f1f1f1;
 }
 
-nav a.selected {
+.selected {
   background-color: #ffffff;
 }
 
@@ -88,4 +88,8 @@ div {
   display: none;
   padding: 20px 0;
   clear: both;
+}
+
+div.open {
+  display: block;
 }
