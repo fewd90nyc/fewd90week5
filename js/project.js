@@ -1,12 +1,32 @@
-// Your code here.
+$(document).ready(function() {
+	$("#roster").click(function() {
+		$(".roster").slideDown(300);
+		$(".assign").slideUp(100);
+	});
 
-// FREEBIES! Blank-out the inputs onfocus.
-document.getElementById("name").onfocus = clearName;
-document.getElementById("grade").onfocus = clearGrade;
+	$("#assign").click(function() {
+		$(".roster").slideUp(100);
+		$(".assign").slideDown(300);
+	});
 
-function clearName() {
-  document.getElementById("name").value = "";
-}
-function clearGrade() {
-  document.getElementById("grade").value = "";
-}
+	$("#name").focusin(function() {
+		$("#name").val("");
+	});
+
+	$("#grade").focusin(function() {
+		$("#grade").val("");
+	});
+});
+
+
+
+
+// document.getElementById("name").onfocus = clearName;
+// document.getElementById("grade").onfocus = clearGrade;
+
+// function clearName() {
+//   document.getElementById("name").value = "";
+// }
+// function clearGrade() {
+//   document.getElementById("grade").value = "";
+// }
